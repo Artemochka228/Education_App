@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find The Flag</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/main.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/tasks.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img class="logo">
+                <a class="nav_a" href="/index"> Главная </a>
+                <a class="nav_a" href="/categories"> Задания </a>
+                <a class="nav_a" href="/pages/in_dev.html"> Учебные материалы </a>
+                <a class="nav_a" href="/pages/login.html"><img class="authorize" href=""></a>
+            </nav>
+        </header>
+        <div class="task_sheet">
+            <% for(var i = 0; i < tasks.length; i++) {%>
+                <div>
+                    <p class="caption"><a href=<%="/tasks/task/"+tasks[i].id %>><%=tasks[i].name %></a></p>
+                    <p class="desc"><%=tasks[i].description %></p>
+                </div>
+            <%} %>
+        </div>
+    </body>
+</html>
